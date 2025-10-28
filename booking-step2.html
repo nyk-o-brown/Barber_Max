@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Barber | Barber Max</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="bg-gray-100">
+    <custom-navbar></custom-navbar>
+    
+    <main class="max-w-4xl mx-auto py-20 px-4">
+        <!-- Booking Progress -->
+        <div class="flex justify-between mb-12 relative">
+            <div class="step flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold mb-2">1</div>
+                <span class="text-gray-500">Services</span>
+            </div>
+            <div class="step flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center font-bold mb-2">2</div>
+                <span class="font-medium">Barber</span>
+            </div>
+            <div class="step flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold mb-2">3</div>
+                <span class="text-gray-500">Time</span>
+            </div>
+            <div class="step flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold mb-2">4</div>
+                <span class="text-gray-500">Confirm</span>
+            </div>
+            <div class="absolute h-1 bg-gray-200 top-6 left-16 right-16 -z-10"></div>
+            <div class="absolute h-1 bg-black top-6 left-16 w-1/2 -z-10"></div>
+        </div>
+        
+        <!-- Barber Selection -->
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold mb-8">Select Your Barber</h2>
+            
+            <div class="space-y-6">
+                <!-- Barber 1 -->
+                <div class="barber-card border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-black transition flex items-start">
+                    <img src="http://static.photos/people/200x200/1" alt="Barber" class="w-16 h-16 rounded-full object-cover mr-4">
+                    <div class="flex-1">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg">Mark Kamau</h3>
+                                <div class="flex items-center mb-2">
+                                    <div class="flex mr-2">
+                                        <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                        <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                        <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                        <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                        <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600">48 reviews</span>
+                                </div>
+                                <p class="text-gray-600 text-sm">10+ years experience in precision cuts and beard work</p>
+                            </div>
+                            <input type="radio" name="barber" id="barber1" class="mt-1 h-5 w-5">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Barber 2 -->
+                <div class="barber-card border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-black transition flex items-start">
+                    <img src="http://static.photos/people/200x200/2" alt="Barber" class="w-16 h-16 rounded-full object-cover mr-4">
+                    <div class="flex-1">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg">James Mwangi</h3>
+                                <div class="flex items-center mb-2">
+                                    <div class="flex mr-2">
+                                        <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                        <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                        <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                        <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                        <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600">72 reviews</span>
+                                </div>
+                                <p class="text-gray-600 text-sm">Specializes in fades and detailed beard sculpting</p>
+                            </div>
+                            <input type="radio" name="barber" id="barber2" class="mt-1 h-5 w-5">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Barber 3 -->
+                <div class="barber-card border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-black transition flex items-start">
+                    <img src="http://static.photos/people/200x200/3" alt="Barber" class="w-16 h-16 rounded-full object-cover mr-4">
+                    <div class="flex-1">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg">Dennis Omondi</h3>
+                                <div class="flex items-center mb-2">
+                                    <div class="flex mr-2">
+                                        <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                        <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                        <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                        <i data-feather="star" class="text-yellow-400 w-4 h-4 fill-current"></i>
+                                        <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+                                    </div>
+                                    <span class="text-sm text-gray-600">36 reviews</span>
+                                </div>
+                                <p class="text-gray-600 text-sm">Hair treatment specialist with focus on hair health</p>
+                            </div>
+                            <input type="radio" name="barber" id="barber3" class="mt-1 h-5 w-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-between items-center mt-10">
+                <a href="/booking.html" class="text-gray-600 hover:text-black flex items-center">
+                    <i data-feather="arrow-left" class="mr-2"></i> Back to services
+                </a>
+                <a href="/booking-step3.html" class="bg-black text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-800 transition flex items-center">
+                    Next: Select Time <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script src="booking.js"></script>
+    <script>
+        feather.replace();
+        
+        // Barber selection highlight
+        document.querySelectorAll('.barber-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (e.target.tagName !== 'INPUT') {
+                    const radio = this.querySelector('input[type="radio"]');
+                    radio.checked = !radio.checked;
+                    this.style.borderColor = radio.checked ? '#000' : '#e5e7eb';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

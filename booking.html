@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Cut | Barber Max</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="bg-gray-100">
+    <custom-navbar></custom-navbar>
+    
+    <main class="max-w-4xl mx-auto py-20 px-4">
+        <!-- Booking Progress -->
+        <div class="flex justify-between mb-12 relative">
+            <div class="step flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center font-bold mb-2">1</div>
+                <span class="font-medium">Services</span>
+            </div>
+            <div class="step flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold mb-2">2</div>
+                <span class="text-gray-500">Barber</span>
+            </div>
+            <div class="step flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold mb-2">3</div>
+                <span class="text-gray-500">Time</span>
+            </div>
+            <div class="step flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold mb-2">4</div>
+                <span class="text-gray-500">Confirm</span>
+            </div>
+            <div class="absolute h-1 bg-gray-200 top-6 left-16 right-16 -z-10"></div>
+            <div class="absolute h-1 bg-black top-6 left-16 w-1/4 -z-10"></div>
+        </div>
+        
+        <!-- Booking Form -->
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold mb-8">Select Services</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                <!-- Service Option 1 -->
+                <div class="service-option border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-black transition">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg">Precision Haircut</h3>
+                            <p class="text-gray-600">Expert cut tailored to your style</p>
+                        </div>
+                        <span class="font-bold">KES 500</span>
+                    </div>
+                    <div class="mt-4 flex items-center">
+                        <input type="checkbox" id="service1" class="mr-2 h-5 w-5">
+                        <label for="service1">Add to booking</label>
+                    </div>
+                </div>
+                
+                <!-- Service Option 2 -->
+                <div class="service-option border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-black transition">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg">Beard Grooming</h3>
+                            <p class="text-gray-600">Professional trim & shaping</p>
+                        </div>
+                        <span class="font-bold">KES 300</span>
+                    </div>
+                    <div class="mt-4 flex items-center">
+                        <input type="checkbox" id="service2" class="mr-2 h-5 w-5">
+                        <label for="service2">Add to booking</label>
+                    </div>
+                </div>
+                
+                <!-- Service Option 3 -->
+                <div class="service-option border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-black transition">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg">Hair Treatment</h3>
+                            <p class="text-gray-600">Revitalize your hair</p>
+                        </div>
+                        <span class="font-bold">KES 800</span>
+                    </div>
+                    <div class="mt-4 flex items-center">
+                        <input type="checkbox" id="service3" class="mr-2 h-5 w-5">
+                        <label for="service3">Add to booking</label>
+                    </div>
+                </div>
+                
+                <!-- Service Option 4 -->
+                <div class="service-option border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-black transition">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg">Hot Towel Shave</h3>
+                            <p class="text-gray-600">Traditional straight razor shave</p>
+                        </div>
+                        <span class="font-bold">KES 400</span>
+                    </div>
+                    <div class="mt-4 flex items-center">
+                        <input type="checkbox" id="service4" class="mr-2 h-5 w-5">
+                        <label for="service4">Add to booking</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-gray-600 hover:text-black flex items-center">
+                    <i data-feather="arrow-left" class="mr-2"></i> Back to home
+                </a>
+                <a href="/booking-step2.html" class="bg-black text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-800 transition flex items-center">
+                    Next: Choose Barber <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script src="booking.js"></script>
+    <script>
+        feather.replace();
+        
+        // Highlight selected services
+        document.querySelectorAll('.service-option').forEach(option => {
+            option.addEventListener('click', function(e) {
+                if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'LABEL') {
+                    const checkbox = this.querySelector('input[type="checkbox"]');
+                    checkbox.checked = !checkbox.checked;
+                    this.style.borderColor = checkbox.checked ? '#000' : '#e5e7eb';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+/* Custom styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+}
+
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}

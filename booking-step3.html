@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Time | Barber Max</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="bg-gray-100">
+    <custom-navbar></custom-navbar>
+    
+    <main class="max-w-4xl mx-auto py-20 px-4">
+        <!-- Booking Progress -->
+        <div class="flex justify-between mb-12 relative">
+            <div class="step flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold mb-2">1</div>
+                <span class="text-gray-500">Services</span>
+            </div>
+            <div class="step flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold mb-2">2</div>
+                <span class="text-gray-500">Barber</span>
+            </div>
+            <div class="step flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center font-bold mb-2">3</div>
+                <span class="font-medium">Time</span>
+            </div>
+            <div class="step flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold mb-2">4</div>
+                <span class="text-gray-500">Confirm</span>
+            </div>
+            <div class="absolute h-1 bg-gray-200 top-6 left-16 right-16 -z-10"></div>
+            <div class="absolute h-1 bg-black top-6 left-16 w-3/4 -z-10"></div>
+        </div>
+        
+        <!-- Time & Location Selection -->
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold mb-8">Select Time & Location</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Location Selection -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Location</h3>
+                    <div class="space-y-4">
+                        <div class="location-card border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-black transition">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold">In house Service</h4>
+                                    <p class="text-gray-600 text-sm">Your home</p>
+                                </div>
+                                <input type="radio" name="location" id="location1" class="mt-1 h-5 w-5">
+                            </div>
+                        </div>
+                        
+                        <div class="location-card border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-black transition">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold">Kilimani Barbershop</h4>
+                                    <p class="text-gray-600 text-sm">Kilimani Plaza, Ground Floor</p>
+                                </div>
+                                <input type="radio" name="location" id="location2" class="mt-1 h-5 w-5" checked>
+                            </div>
+                        </div>
+                        
+                        <div class="location-card border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-black transition">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold">CBD Express</h4>
+                                    <p class="text-gray-600 text-sm">Kenyatta Avenue, Opposite I&M Bank</p>
+                                </div>
+                                <input type="radio" name="location" id="location3" class="mt-1 h-5 w-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Date & Time Selection -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Date & Time</h3>
+                    
+                    <div class="mb-4">
+                        <label for="booking-date" class="block text-sm font-medium mb-1">Select Date</label>
+                        <input type="date" id="booking-date" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-black focus:border-transparent" min="">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Available Times</label>
+                        <div class="grid grid-cols-3 gap-2">
+                            <button type="button" class="time-slot bg-gray-100 hover:bg-black hover:text-white py-2 rounded transition">9:00 AM</button>
+                            <button type="button" class="time-slot bg-gray-100 hover:bg-black hover:text-white py-2 rounded transition">10:00 AM</button>
+                            <button type="button" class="time-slot bg-gray-100 hover:bg-black hover:text-white py-2 rounded transition">11:00 AM</button>
+                            <button type="button" class="time-slot bg-gray-100 hover:bg-black hover:text-white py-2 rounded transition">12:00 PM</button>
+                            <button type="button" class="time-slot bg-gray-100 hover:bg-black hover:text-white py-2 rounded transition">1:00 PM</button>
+                            <button type="button" class="time-slot bg-gray-100 hover:bg-black hover:text-white py-2 rounded transition">2:00 PM</button>
+                            <button type="button" class="time-slot bg-gray-100 hover:bg-black hover:text-white py-2 rounded transition">3:00 PM</button>
+                            <button type="button" class="time-slot bg-gray-100 hover:bg-black hover:text-white py-2 rounded transition">4:00 PM</button>
+                            <button type="button" class="time-slot bg-gray-100 hover:bg-black hover:text-white py-2 rounded transition">5:00 PM</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-between items-center mt-10">
+                <a href="/booking-step2.html" class="text-gray-600 hover:text-black flex items-center">
+                    <i data-feather="arrow-left" class="mr-2"></i> Back to barbers
+                </a>
+                <a href="/booking-step4.html" class="bg-black text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-800 transition flex items-center">
+                    Next: Confirm Booking <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script src="booking.js"></script>
+    <script>
+        feather.replace();
+        
+        // Set min date to today
+        document.getElementById('booking-date').min = new Date().toISOString().split('T')[0];
+        
+        // Location selection highlight
+        document.querySelectorAll('.location-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (e.target.tagName !== 'INPUT') {
+                    const radio = this.querySelector('input[type="radio"]');
+                    radio.checked = !radio.checked;
+                    this.style.borderColor = radio.checked ? '#000' : '#e5e7eb';
+                }
+            });
+        });
+        
+        // Time slot selection
+        document.querySelectorAll('.time-slot').forEach(slot => {
+            slot.addEventListener('click', function() {
+                document.querySelectorAll('.time-slot').forEach(s => {
+                    s.classList.remove('bg-black', 'text-white');
+                    s.classList.add('bg-gray-100');
+                });
+                this.classList.add('bg-black', 'text-white');
+                this.classList.remove('bg-gray-100');
+            });
+        });
+    </script>
+</body>
+</html>
