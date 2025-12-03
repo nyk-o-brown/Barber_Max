@@ -31,8 +31,7 @@ class CustomNavbar extends HTMLElement {
           margin: ;
           padding: 0;
           align-items: center;
-          position: relative;
-          left: -4rem;
+          
 
         }
         a {
