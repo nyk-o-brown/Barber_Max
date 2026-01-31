@@ -40,6 +40,7 @@ npm install
    - Open Google Calendar
    - Settings → Settings → Calendars
    - Find your calendar and copy the "Calendar ID"
+   258836420056-3eskagm37g900qoqicmrjm2tfstqv063.apps.googleusercontent.com
 
 ### 3. Environment Configuration
 
