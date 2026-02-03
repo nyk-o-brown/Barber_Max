@@ -4,6 +4,7 @@
 const API_BASE_URL = 'http://localhost:5000/api';
 
 export class BarberAppointmentAPI {
+  
   // Create a new appointment
   static async createAppointment(appointmentData) {
     try {
