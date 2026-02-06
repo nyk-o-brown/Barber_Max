@@ -97,3 +97,5 @@ Admin dashboard to view/manage scheduled meetings.
 ✅ In short:
 
 Google Cloud setup → OAuth authentication → API integration → Frontend form → Backend event creation → Deployment.
+
+
